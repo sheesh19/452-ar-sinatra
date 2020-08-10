@@ -1,0 +1,17 @@
+<h1>Character List</h1>
+
+<ul>
+    <% @characters.each do |character| %>
+     <li><a href="/characters/<%= character.id %>"><%= character.name %> </a></li>
+    <% end %>
+</ul>
+
+<form action="/characters" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name">
+    <label for="character_type">Character Type</label>
+    <input type="text" name="character_type">
+    <label for="location">Location</label>
+    <input type="text" name="location">
+    <input type="submit">
+</form>
