@@ -1,10 +1,15 @@
 <h1>Character List</h1>
 
+<!-- For our loop, we want to have a multi line syntax. We don't want to display the loop itself, so we use the <% %> tags for the .each loop & the end -->
+<!-- We use the <%= %> tags to display our ruby code- in this case, the character ids && character name -->
+
 <ul>
     <% @characters.each do |character| %>
      <li><a href="/characters/<%= character.id %>"><%= character.name %> </a></li>
     <% end %>
 </ul>
+
+<!-- The syntax is critical to make our form work with the post action in our /characters app.rb file -->
 
 <form action="/characters" method="post">
     <label for="name">Name</label>
